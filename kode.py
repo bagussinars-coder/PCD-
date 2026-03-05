@@ -24,10 +24,7 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-
-# =========================
-# INPUT p dan q MANUAL
-# =========================
+    
 while True:
     p = int(input("Masukkan bilangan prima p: "))
     if is_prime(p):
@@ -39,10 +36,7 @@ while True:
     if is_prime(q):
         break
     print("q bukan bilangan prima!")
-
-# =========================
-# HITUNG n dan phi
-# =========================
+    
 n = p * q
 phi = (p - 1) * (q - 1)
 
@@ -52,9 +46,6 @@ e = random.randint(2, phi - 1)
 while gcd(e, phi) != 1:
     e = random.randint(2, phi - 1)
 
-# =========================
-# HITUNG d
-# =========================
 d = mod_inverse(e, phi)
 
 print("\n=== KUNCI RSA ===")
